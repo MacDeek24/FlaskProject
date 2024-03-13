@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Doctors</h1>
+
+    <!-- Doctor List -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          {% if user.doctor %}
+            <tr>
+              <td>{{ user.name }}</td>
+              <td>
+                <form method="post" action="{{ url_for('remove_doctor', user_id=user.id) }}">
+                  <input type="submit" value="Remove Doctor Status">
+                </form>
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <a href="{{ url_for('dashboard') }}" class="button">Back to Dashboard</a>
+  </body>
+</html>

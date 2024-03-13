@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% include 'base.html' %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Find Hospital</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="static/style_hospital.css">
+  
+</head>
+<body>
+  <main>
+    <h2>Search Hospital</h2>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search">
+      <button type="submit">Search</button>
+    </form>
+
+    <section class="hospitals">
+      <h3>Hospitals</h3>
+      <div class="hospital-row">
+        {% for hospital in hospitals %}
+        <div class="hospital-box">
+          <a href="{{ url_for('wards', hospital_id=hospital.hospital_id) }}">
+            <img src="static/images/4790257_49075.jpg" alt="{{ hospital.hospital_name }}">
+            <span>{{ hospital.hospital_name }}</span>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    
+
+<!--<section class="nearby-hospitals">
+  <h3>Nearby Hospitals</h3>
+  <ul>
+  </ul>
+</section>-->
+
+<section class="specializations">
+<h3>Specializations</h3>
+<div class="hospital-row">
+  <div class="hospital-box">
+    <a href="#">
+      <img src="https://th.bing.com/th/id/OIP.tJApXZpCqhLz6DG9eVTS_gHaEK?w=295&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Cardiology">
+      <span>Cardiology</span>
+    </a>
+  </div>
+  <div class="hospital-box">
+    <a href="#">
+      <img src="https://th.bing.com/th/id/OIP.3NsCUQ5ffU6ku3ko_wjJhgHaE7?w=231&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Orthopedic">
+      <span>Orthopedic</span>
+    </a>
+    
+  </div>
+  <div class="hospital-box">
+    <a href="#">
+      <img src="https://th.bing.com/th/id/OIP.dyC1pZDNvQAr9wipfAV5zAHaGe?w=193&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Neurology">
+      <span>Neurology</span>
+    </a>
+    
+  </div>
+</div>
+</section>
+    
+  </main>
+
+ 
+</body>
+</html>

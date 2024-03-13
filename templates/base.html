@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Find Hospital</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Let's Find Hospital</a>
+            </div>
+            <div class="Ham-btn" onclick="toggleSidebar()">&#9776;</div>
+        </div>
+        <div class="sidebar sidebarGo" id="sidebar ">
+            <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+            <div class="profile">
+              <img src="{{ url_for('static', filename='images/27470334_7309681.jpg') }}" alt="profile_picture">
+                <h3>{{ user_name }}</h3>
+                <p>User</p>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- JavaScript to toggle sidebar -->
+    <script src="{{ url_for('static', filename='hospital.js') }}"></script>
+
+</body>
+</html>

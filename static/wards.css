@@ -1,0 +1,35 @@
+
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  
+  /* Main container styles */
+  main {
+    padding-top: 93px;
+    padding-left: 20px;
+  }
+  
+  /* Heading styles */
+  h2 {
+    margin-bottom: 20px; /* add some space below heading */
+    color: #333; /* dark grey */
+  }
+  
+  /* List styles */
+  ul {
+    list-style-type: none; /* remove bullet points */
+  }
+  
+  /* List item styles */
+  li {
+    padding: 10px 0; /* add vertical padding */
+  }
+  
+  /* Last list item styles */
+  li:last-child {
+    border-bottom: none; /* remove border bottom from last item */
+  }
+  

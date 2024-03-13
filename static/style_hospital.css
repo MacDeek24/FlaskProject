@@ -1,0 +1,202 @@
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+main {
+  padding-top: 93px;
+  padding-left: 20px;
+  /* padding: 50px 15px; */
+}
+
+h1,
+h2,
+h3 {
+  margin: 10px 0;
+}
+
+a {
+  color: #007bff;
+  /* Link color */
+}
+
+
+/* Hospital list styles */
+.hospital-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hospital-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hospital-list li {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.hospital-list li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Specializations styles */
+.specializations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specializations li {
+  margin-bottom: 10px;
+}
+
+/* General layout and spacing */
+.hospitals,
+.nearby-hospitals,
+.specializations {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: rem;
+}
+
+.hospital-row {
+  display: flex;
+  overflow-x: scroll;
+  /* width: 100%; */
+  max-width: 100%;
+  /* flex-wrap: wrap; */
+
+  gap: 0rem;
+  /* Adjust this value to control the spacing between boxes */
+}
+
+.hospital-box {
+  width: 200px;
+  /* Adjust the width as needed */
+  height: 200px;
+  /* Set the height to match the width */
+  margin-bottom: 1rem;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+  min-width: 200px;
+  /* Adjust the width as needed */
+  min-height: 200px;
+}
+
+.hospital-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hospital-box span {
+  background-color: #4caf4fac;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  position: absolute;
+  width: 100%;
+}
+
+.nearby-hospitals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nearby-hospitals li {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nearby-hospitals a {
+  color: #333;
+  text-decoration: none;
+}
+
+.specializations ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specializations li {
+  margin-bottom: 0.5rem;
+}
+
+.specializations a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* Search bar */
+
+#search-form {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  /* Adjust as needed */
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100px;
+}
+
+#search-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  h1,
+  h2,
+  h3 {
+    margin: 5px 0;
+  }
+
+  .hospital-box {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+    margin-right: 15px;
+    overflow: hidden;
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
+  }
+}
